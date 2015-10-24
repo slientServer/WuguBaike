@@ -1,10 +1,21 @@
+.text-center{
+	text-align: center;
+}
+
 .user-input{
 	margin-left: 37%;
 	margin-top: 40px;
 }
 
-.marginLeft{
-	margin-left: 10%;
+.name-pwd{
+	margin-right: 20px;
+	font-size: 20px;
+	font-weight: bolder;
+}
+
+.marginLeftRight{
+	margin-left: 7%;
+	margin-right:7%;
 }
 
 .error{

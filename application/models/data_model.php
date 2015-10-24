@@ -12,4 +12,9 @@ class data_model extends CI_Model{
 		$queryResult= $this->db->query($sql);
 		return $queryResult;
 	}
+
+	public function insertData($table_name= 'baike', $data){
+		$str= $this->db->insert($table_name, $data);
+		return $str;
+	}
 }
