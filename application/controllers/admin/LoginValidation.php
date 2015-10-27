@@ -14,7 +14,7 @@ class LoginValidation extends CI_Controller{
 
 		if($this->form_validation->run()== TRUE){
 			
-			echo '验证成功！';
+			redirect('admin/AdminHomePage/index/'.trim($_POST['username']));
 
 		}else{
 

@@ -18,6 +18,28 @@
 	margin-right:7%;
 }
 
+.marginTBLR{
+	margin: 30px 10px 0px 10px;
+}
+
 .error{
 	color: red;
+}
+
+.item-width{
+	margin-top: 20px;
+	width: 21%;
+	margin-right: 2%;
+	margin-left: 2%;
+	display: inline-block;
+}
+
+.submitButton{
+	margin-left: 40%;
+	margin-top: 20px;
+	display: inline-block;
+}
+
+.marginRight{
+	margin-right: 50px;
 }
