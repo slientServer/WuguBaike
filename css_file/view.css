@@ -35,11 +35,17 @@
 }
 
 .submitButton{
-	margin-left: 40%;
+	margin-left: 47%;
 	margin-top: 20px;
 	display: inline-block;
 }
 
 .marginRight{
 	margin-right: 50px;
+}
+
+.text-ellipsis{
+	white-space: nowrap;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
 }

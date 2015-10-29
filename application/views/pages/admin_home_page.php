@@ -12,7 +12,7 @@
   <!-- Tab panes -->
   <div class="tab-content">
     <div role="tabpanel" class="tab-pane active" id="wugu_list">
-    	<?php $this->load->view('pages/item_list', array('items'=> $wugu_info));?>
+    	<?php $this->load->view('pages/item_list', array('items'=> $wugu_info, 'user_name'=> $user_name));?>
     </div>
     <div role="tabpanel" class="tab-pane" id="wugu_xiaofang">
     </div>
