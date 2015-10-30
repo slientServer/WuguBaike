@@ -44,4 +44,14 @@ class data_model extends CI_Model{
 
 		return $count_pre> $count_aft;
 	}
+
+	public function getXiaofangInfo($xiaofang_id= FALSE){
+		 if ($xiaofang_id === FALSE){
+		        $query = $this->db->get('xiaofang');
+		        return $query->result();
+		   }
+
+		  $query = $this->db->get_where('xiaofang', array('xiaofang_id' => $xiaofang_id));
+		  return $query->result();
+	}
 }

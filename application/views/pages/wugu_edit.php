@@ -1,17 +1,27 @@
-<h3 class='text-center'>五谷百科条目编辑页面</h3>
-<h5>欢迎登录管理系统,<?php if(isset($user_name)){echo $user_name;} ?></h5>
-<hr>
 <?php 
 //五谷百科发布/编辑页面
+$this->load->helper(array('url', 'form'));
+ if(isset($item)){
+    echo form_open('admin/WuguData'); 
+ }else{
+    echo form_open('admin/WuguData/add');
+ }
+?>
 
-echo form_open('admin/WuguData'); 
+<?php
+//处理edit wugu_id 无效
+if(isset($item)){
+    echo '<input type="hidden" name= "wugu_id" value= '.$item[0]->baike_id.'>';
+}
+echo '<input type="hidden" id="wugu_list_tab_id" name= "list_tab_id" value= '.$list_tab_id.'>';
+
 ?>
 
 <div class="row marginTBLR">
   <div class="col-lg-6">
-    <div class="input-group" disabled="disabled">
+    <div class="input-group">
      <span class="input-group-addon" id="basic-addon1">五谷编号</span>
-     <input type="text" class="form-control" aria-describedby="basic-addon1" disabled="disabled"
+     <input type="text" class="form-control" name="wugu_id" placeholder= "五谷编号" aria-describedby="basic-addon1" <?php if(isset($item)){ echo 'disabled= "disabled"';}?>
             title= <?php if(isset($item)){ echo $item[0]->baike_id;} ?> value= <?php if(isset($item)){ echo $item[0]->baike_id;} ?>>
     </div>
   </div>
@@ -23,8 +33,6 @@ echo form_open('admin/WuguData');
     </div>
   </div>
 </div>
-
-<input type="hidden" name= "wugu_id" value= <?php if(isset($item)){ echo $item[0]->baike_id;} ?>>
 
 <div class="row marginTBLR">
   <div class="col-lg-6">
@@ -97,7 +105,7 @@ echo form_open('admin/WuguData');
 
 <div class='submitButton'>
   <span class="marginRight"><?php echo form_submit("mySubmit", "保存");?></span>
-  <span ><button type="reset" onclick="backToHomePage();">取消</button></span>
+  <span ><button type="reset" onclick="WuguBackToHomePage();">取消</button></span>
 </div>
 
 </form>
