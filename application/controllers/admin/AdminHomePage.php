@@ -27,16 +27,24 @@ class AdminHomePage extends CI_Controller{
 		
 	}
 
-	public function edit($item_id, $user_name, $list_tab_id){
+	public function edit($item_id, $user_name, $list_tab_id, $prefix){
 
 		$this->load->helper(array('url', 'form'));
 		$this->load->model('data_model');
-		$data['item']= $this->data_model->getWuguInfo($item_id);
+		if($prefix== 'baike'){
+			$data['item']= $this->data_model->getWuguInfo($item_id);
+		}else if($prefix== 'xiaofang'){
+			$data['item']= $this->data_model->getXiaofangInfo($item_id);
+		}
 		$data['user_name']= $user_name;
 		$data['list_tab_id']= $list_tab_id;
 
 		$this->load->view('templates/header');
-		$this->load->view('pages/wugu_edit', $data);
+		if($prefix== 'baike'){
+			$this->load->view('pages/wugu_edit', $data);
+		}else{
+			$this->load->view('pages/wugu_xiaofang_edit', $data);
+		}
 		$this->load->view('templates/footer');
 	}
 

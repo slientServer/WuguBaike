@@ -26,8 +26,8 @@ echo '<input type="hidden" id="xiaofang_list_tab_id" name= "list_tab_id" value= 
   </div>
   <div class="col-lg-6">
     <div class="input-group">
-     <span class="input-group-addon" id="basic-addon1">养生定位</span>
-     <input type="text" class="form-control" name="xiaofang_position" placeholder="养生定位" aria-describedby="basic-addon1" 
+     <span class="input-group-addon" id="basic-addon1">养生部位</span>
+     <input type="text" class="form-control" name="xiaofang_position" placeholder="养生部位" aria-describedby="basic-addon1" 
             title= <?php if(isset($item)){ echo $item[0]->xiaofang_position;} ?> value= <?php if(isset($item)){ echo $item[0]->xiaofang_position;} ?>>
     </div>
   </div>

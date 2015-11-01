@@ -27,8 +27,8 @@ echo '<input type="hidden" id="wugu_list_tab_id" name= "list_tab_id" value= '.$l
   </div>
   <div class="col-lg-6">
     <div class="input-group">
-     <span class="input-group-addon" id="basic-addon1">养生定位</span>
-     <input type="text" class="form-control" name="wugu_position" placeholder="养生器官" aria-describedby="basic-addon1" 
+     <span class="input-group-addon" id="basic-addon1">养生部位</span>
+     <input type="text" class="form-control" name="wugu_position" placeholder="养生部位" aria-describedby="basic-addon1" 
             title= <?php if(isset($item)){ echo $item[0]->baike_position;} ?> value= <?php if(isset($item)){ echo $item[0]->baike_position;} ?>>
     </div>
   </div>
