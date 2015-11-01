@@ -1,3 +1,8 @@
+.pageSetting{
+	background-image: url("./image/background.jpg");
+	background-size: 100% 100%;
+}
+
 .text-center{
 	text-align: center;
 }
@@ -49,3 +54,11 @@
     overflow-x: hidden;
     text-overflow: ellipsis;
 }
+
+.float-right{
+	font-size: 30px;
+	position: fixed;
+	margin-left: 90%;
+	z-index: 2;
+}
+

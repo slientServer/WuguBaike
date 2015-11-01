@@ -13,7 +13,7 @@ class XiaofangData extends CI_Controller{
 		$xiaofang_name= $_POST["xiaofang_name"];
 		$xiaofang_method= $_POST["xiaofang_method"];
 		$xiaofang_from= $_POST["xiaofang_from"];
-		$xiaofang_result= $_POST["xiaofang_result"];
+		$xiaofang_value= $_POST["xiaofang_value"];
 		$xiaofang_jinji= $_POST["xiaofang_jinji"];
 		$xiaofang_content= $_POST["xiaofang_content"];
 		$user_name= $_POST["user_name"];
@@ -22,7 +22,7 @@ class XiaofangData extends CI_Controller{
 
 		$data= array('xiaofang_position'=> $xiaofang_position, 
 					'xiaofang_name'=> $xiaofang_name, 'xiaofang_method'=> $xiaofang_method, 
-					'xiaofang_from'=> $xiaofang_from, 'xiaofang_result'=> $xiaofang_result, 
+					'xiaofang_from'=> $xiaofang_from, 'xiaofang_value'=> $xiaofang_value, 
 					'xiaofang_content'=> $xiaofang_content, 'xiaofang_jinji'=> $xiaofang_jinji);
 		$str=$this->data_model->updateData('xiaofang', $data, 'xiaofang_id="'.$xiaofang_id.'"');
 		if($str==1){
@@ -53,7 +53,7 @@ class XiaofangData extends CI_Controller{
 		$xiaofang_name= $_POST["xiaofang_name"];
 		$xiaofang_method= $_POST["xiaofang_method"];
 		$xiaofang_from= $_POST["xiaofang_from"];
-		$xiaofang_result= $_POST["xiaofang_result"];
+		$xiaofang_value= $_POST["xiaofang_value"];
 		$xiaofang_jinji= $_POST["xiaofang_jinji"];
 		$xiaofang_content= $_POST["xiaofang_content"];
 		$user_name= $_POST["user_name"];
@@ -61,7 +61,7 @@ class XiaofangData extends CI_Controller{
 
 		$data= array('xiaofang_id' => $xiaofang_id, 'xiaofang_position'=> $xiaofang_position, 
 			'xiaofang_name'=> $xiaofang_name, 'xiaofang_method'=> $xiaofang_method, 
-			'xiaofang_from'=> $xiaofang_from, 'xiaofang_result'=> $xiaofang_result, 
+			'xiaofang_from'=> $xiaofang_from, 'xiaofang_value'=> $xiaofang_value, 
 			'xiaofang_content'=> $xiaofang_content, 'xiaofang_jinji'=> $xiaofang_jinji);
 		$str=$this->data_model->insertData('xiaofang', $data);
 		if($str==1){

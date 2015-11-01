@@ -1,4 +1,10 @@
 <?php 
+
+if(isset($item)){
+    echo  '<h3 class="text-center">五谷养生百科后台管理系统</h3>
+          <h5>欢迎登录管理系统,'.$user_name.'！&nbsp;<a href= "/WuguBaike/index.php/admin/SessionDestroy">登出</a></h5><hr>';
+}
+
 //五谷百科发布/编辑页面
 $this->load->helper(array('url', 'form'));
  if(isset($item)){
@@ -71,8 +77,8 @@ echo '<input type="hidden" id="xiaofang_list_tab_id" name= "list_tab_id" value= 
 <div class="col-lg-12 marginTBLR">
     <div class="input-group">
      <span class="input-group-addon" id="basic-addon1">小方疗效</span>
-     <textarea type="textarea" rows="4" class="form-control" name="xiaofang_result" aria-describedby="basic-addon1"
-               title= <?php if(isset($item)){ echo $item[0]->xiaofang_result;} ?>><?php if(isset($item)){ echo $item[0]->xiaofang_result;} ?></textarea>
+     <textarea type="textarea" rows="4" class="form-control" name="xiaofang_value" aria-describedby="basic-addon1"
+               title= <?php if(isset($item)){ echo $item[0]->xiaofang_value;} ?>><?php if(isset($item)){ echo $item[0]->xiaofang_value;} ?></textarea>
     </div>
 </div>
 

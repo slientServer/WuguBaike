@@ -12,6 +12,13 @@ function XiaofangBackToHomePage(){
 
 }
 
+function BaojianpinBackToHomePage(){
+    var username= $('#current_user_name')[0].value;
+    var list_tab_id= $('#baojianpin_list_tab_id')[0].value;
+    window.location.href= '/WuguBaike/index.php/admin/AdminHomePage/index/'+username+'/NaN/'+list_tab_id;
+
+}
+
 function deleteItem(){
 
     var result= confirm('确认删除该条记录?');

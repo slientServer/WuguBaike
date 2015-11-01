@@ -7,4 +7,5 @@
         <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
         <title>五谷养生百科</title>       
     </head>
-    <body>
+    <body class= "pageSetting">
+    	<div id= 'hintInfo' class= 'error float-right'></div>

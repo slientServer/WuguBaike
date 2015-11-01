@@ -23,17 +23,6 @@ class data_model extends CI_Model{
 		return $str;
 	}
 
-	public function getWuguInfo($baike_id= FALSE){
-
-		  if ($baike_id === FALSE){
-		        $query = $this->db->get('baike');
-		        return $query->result();
-		   }
-
-		  $query = $this->db->get_where('baike', array('baike_id' => $baike_id));
-		  return $query->result();
-	}
-
 	public function deleteData($table_name= 'baike', $statement){
 
 		$count_pre= $this->db->count_all($table_name);
@@ -45,6 +34,17 @@ class data_model extends CI_Model{
 		return $count_pre> $count_aft;
 	}
 
+	public function getWuguInfo($baike_id= FALSE){
+
+		  if ($baike_id === FALSE){
+		        $query = $this->db->get('baike');
+		        return $query->result();
+		   }
+
+		  $query = $this->db->get_where('baike', array('baike_id' => $baike_id));
+		  return $query->result();
+	}
+
 	public function getXiaofangInfo($xiaofang_id= FALSE){
 		 if ($xiaofang_id === FALSE){
 		        $query = $this->db->get('xiaofang');
@@ -52,6 +52,16 @@ class data_model extends CI_Model{
 		   }
 
 		  $query = $this->db->get_where('xiaofang', array('xiaofang_id' => $xiaofang_id));
+		  return $query->result();
+	}
+
+	public function getBaojianpinInfo($baojianpin_id= FALSE){
+		 if ($baojianpin_id === FALSE){
+		        $query = $this->db->get('baojianpin');
+		        return $query->result();
+		   }
+
+		  $query = $this->db->get_where('baojianpin', array('baojianpin_id' => $baojianpin_id));
 		  return $query->result();
 	}
 }

@@ -33,6 +33,8 @@ class LoginValidation extends CI_Controller{
 			$res= $this->data_model->queryData('select * from user');
 			foreach ($res->result() as $row) {
 				if($row-> user_name== $username && $row->user_pwd== $userpwd){
+					$this->load->library('session');
+					$_SESSION['username']= $username;
 					return TRUE;
 				}
 			}

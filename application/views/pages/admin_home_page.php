@@ -1,5 +1,5 @@
 <h3 class="text-center">五谷养生百科后台管理系统</h3>
-<h5>欢迎登录管理系统,<?php if(isset($user_name)){echo $user_name;} ?></h5>
+<h5>欢迎登录管理系统,<?php if(isset($user_name)){echo $user_name;}?>！&nbsp;<a href= "/WuguBaike/index.php/admin/SessionDestroy">登出</a></h5>
 <hr>
 <div>
   <!-- Nav tabs -->
@@ -27,8 +27,10 @@
       <?php $this->load->view('pages/wugu_xiaofang_edit', array('user_name'=> $user_name, 'list_tab_id'=> 'wugu_xiaofang_list'));?>
     </div>
     <div role="tabpanel" class="tab-pane" id="wugu_baojianpin_list">
+      <?php $this->load->view('pages/item_list', array('items'=> $baojianpin_info, 'user_name'=> $user_name, 'list_tab_id'=> 'wugu_baojianpin_list', 'prefix'=> 'baojianpin'));?>
     </div>
     <div role="tabpanel" class="tab-pane" id="wugu_baojianpin_fabu">
+      <?php $this->load->view('pages/wugu_baojianpin_edit', array('user_name'=> $user_name, 'list_tab_id'=> 'wugu_baojianpin_list'));?>
     </div>
   </div>
 </div>
