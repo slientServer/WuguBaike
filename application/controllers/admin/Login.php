@@ -10,7 +10,6 @@ class Login extends CI_Controller{
     public function loginView($page = 'login'){
 
         $this->load->library('session');
-        $this->load->helper('url');
 
         if(isset($_SESSION['username'])){
             
