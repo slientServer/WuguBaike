@@ -1,5 +1,5 @@
 <h3 class="text-center">五谷养生百科后台管理系统</h3>
-<h5>欢迎登录管理系统,<?php if(isset($user_name)){echo $user_name;}?>！&nbsp;<a href= "/WuguBaike/index.php/admin/SessionDestroy">登出</a></h5>
+<h5>欢迎登录管理系统,<?php if(isset($user_name)){echo $user_name;}?>！&nbsp;<a href= "/wugubaike/index.php/admin/SessionDestroy">登出</a></h5>
 <hr>
 <div>
   <!-- Nav tabs -->

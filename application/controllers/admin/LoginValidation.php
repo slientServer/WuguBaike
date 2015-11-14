@@ -17,7 +17,6 @@ class LoginValidation extends CI_Controller{
 			redirect('admin/AdminHomePage/index/'.trim($_POST['username']));
 
 		}else{
-
 			$this->load->view('templates/header');
 	        $this->load->view('pages/login');
 	        $this->load->view('templates/footer');
@@ -29,11 +28,10 @@ class LoginValidation extends CI_Controller{
 
 		if($this->form_validation->required($userpwd)){
 			
-			$this->load->model('data_model');
-			$res= $this->data_model->queryData('select * from user');
+			$this->load->model('Data_model');
+			$res= $this->Data_model->queryData('select * from user');
 			foreach ($res->result() as $row) {
 				if($row-> user_name== $username && $row->user_pwd== $userpwd){
-					$this->load->library('session');
 					$_SESSION['username']= $username;
 					return TRUE;
 				}

@@ -11,6 +11,9 @@ class WeiXin extends CI_Controller{
 
 		$this->load->helper('url');
         $this->load->helper('form');
+        $this->load->library('WeixinToken');
+        $res=$this->weixintoken->getToken();
+        print_r($res);
            
         $this->load->view('templates/header');
         $this->load->view('weixin_view/mainPage');

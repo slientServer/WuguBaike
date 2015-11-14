@@ -9,8 +9,6 @@ class Login extends CI_Controller{
     
     public function loginView($page = 'login'){
 
-        $this->load->library('session');
-
         if(isset($_SESSION['username'])){
             
             redirect('admin/AdminHomePage/index/'.$_SESSION['username']);

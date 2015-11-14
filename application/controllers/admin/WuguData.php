@@ -6,7 +6,7 @@ class WuguData extends CI_Controller{
 	public function index(){
 
 		$this->load->helper('url');
-		$this->load->model('data_model');
+		$this->load->model('Data_model');
 
 		$wugu_id= $_POST["wugu_id"];
 		$wugu_position= $_POST["wugu_position"];
@@ -26,7 +26,7 @@ class WuguData extends CI_Controller{
 					'baike_alias'=> $wugu_alias, 'baike_position'=> $wugu_position, 'baike_method'=> $wugu_method,
 					'baike_link'=> $wugu_link, 'baike_img'=> $wugu_img, 'baike_value'=> $wugu_value, 
 					'baike_prescription'=> $wugu_prescription);
-		$str=$this->data_model->updateData('baike', $data, 'baike_id="'.$wugu_id.'"');
+		$str=$this->Data_model->updateData('baike', $data, 'baike_id="'.$wugu_id.'"');
 		if($str==1){
 			redirect('admin/AdminHomePage/index/'.$user_name.'/Saved/'.$list_tab_id);
 		}else{
@@ -37,8 +37,8 @@ class WuguData extends CI_Controller{
 	public function delete($item_id, $user_name, $list_tab_id){
 
 		$this->load->helper('url');
-		$this->load->model('data_model');
-		$res=$this->data_model->deleteData('baike', 'baike_id="'.$item_id.'"');
+		$this->load->model('Data_model');
+		$res=$this->Data_model->deleteData('baike', 'baike_id="'.$item_id.'"');
 		if($res){
 			redirect('admin/AdminHomePage/index/'.$user_name.'/Deleted/'.$list_tab_id);
 		}else{
@@ -48,7 +48,7 @@ class WuguData extends CI_Controller{
 
 	public function add(){
 		$this->load->helper('url');
-		$this->load->model('data_model');
+		$this->load->model('Data_model');
 
 		$wugu_id= $_POST["wugu_id"];
 		$wugu_position= $_POST["wugu_position"];
@@ -67,7 +67,7 @@ class WuguData extends CI_Controller{
 					'baike_alias'=> $wugu_alias, 'baike_position'=> $wugu_position, 'baike_method'=> $wugu_method,
 					'baike_link'=> $wugu_link, 'baike_img'=> $wugu_img, 'baike_value'=> $wugu_value, 
 					'baike_prescription'=> $wugu_prescription);
-		$str=$this->data_model->insertData('baike', $data);
+		$str=$this->Data_model->insertData('baike', $data);
 		if($str==1){
 			redirect('admin/AdminHomePage/index/'.$user_name.'/Saved/'.$list_tab_id);
 		}else{

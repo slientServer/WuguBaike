@@ -7,14 +7,12 @@ class SessionDestroy extends CI_Controller{
     }
 
 	public function index($page= 'Login/loginView'){
-
-		$this->load->library('session');
-
+		
+		session_start();
 		unset($_SESSION['username']);
 		session_destroy();
 
 		$this->load->helper('url');
-		echo 'fadsssssssssssssss';
 		redirect('admin/'.$page);
 	}
 }

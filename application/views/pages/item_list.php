@@ -14,8 +14,8 @@
 					 <li class="list-group-item text-ellipsis list-group-item-warning" title='.$row->$name.'><b>条目名字: </b>'.$row->$name.'</li>
 					 <li class="list-group-item text-ellipsis list-group-item-success" title='.$row->$position.'><b>养生部位: </b>'.$row->$position.'</li>
 					 <li class="list-group-item text-ellipsis list-group-item-warning text-center">
-					 	<a class="marginLeftRight" href="/WuguBaike/index.php/admin/AdminHomePage/edit/'.$row->$id.'/'.$user_name.'/'.$list_tab_id.'/'.$prefix.'">编辑</a>
-					 	<a href="/WuguBaike/index.php/admin/'.$adminData.'/delete/'.$row->$id.'/'.$user_name.'/'.$list_tab_id.'" class="marginLeftRight">删除</a>
+					 	<a class="marginLeftRight" href="/wugubaike/index.php/admin/AdminHomePage/edit/'.$row->$id.'/'.$user_name.'/'.$list_tab_id.'/'.$prefix.'">编辑</a>
+					 	<a href="/wugubaike/index.php/admin/'.$adminData.'/delete/'.$row->$id.'/'.$user_name.'/'.$list_tab_id.'" class="marginLeftRight">删除</a>
 					 </li>
 			 </ul>';
 	}

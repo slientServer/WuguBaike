@@ -6,7 +6,7 @@ class BaojianpinData extends CI_Controller{
 	public function index(){
 
 		$this->load->helper('url');
-		$this->load->model('data_model');
+		$this->load->model('Data_model');
 
 		$baojianpin_id= $_POST["baojianpin_id"];
 		$baojianpin_name= $_POST["baojianpin_name"];
@@ -24,7 +24,7 @@ class BaojianpinData extends CI_Controller{
 			'baojianpin_tiaoma'=> $baojianpin_tiaoma, 'baojianpin_pinpai'=> $baojianpin_pinpai, 
 			'baojianpin_value'=> $baojianpin_value, 'baojianpin_buy'=> $baojianpin_buy,
 			'baojianpin_enname'=> $baojianpin_enname);
-		$str=$this->data_model->updateData('baojianpin', $data, 'baojianpin_id="'.$baojianpin_id.'"');
+		$str=$this->Data_model->updateData('baojianpin', $data, 'baojianpin_id="'.$baojianpin_id.'"');
 		if($str==1){
 			redirect('admin/AdminHomePage/index/'.$user_name.'/Saved/'.$list_tab_id);
 		}else{
@@ -35,8 +35,8 @@ class BaojianpinData extends CI_Controller{
 	public function delete($item_id, $user_name, $list_tab_id){
 
 		$this->load->helper('url');
-		$this->load->model('data_model');
-		$res=$this->data_model->deleteData('baojianpin', 'baojianpin_id="'.$item_id.'"');
+		$this->load->model('Data_model');
+		$res=$this->Data_model->deleteData('baojianpin', 'baojianpin_id="'.$item_id.'"');
 		if($res){
 			redirect('admin/AdminHomePage/index/'.$user_name.'/Deleted/'.$list_tab_id);
 		}else{
@@ -46,7 +46,7 @@ class BaojianpinData extends CI_Controller{
 
 	public function add(){
 		$this->load->helper('url');
-		$this->load->model('data_model');
+		$this->load->model('Data_model');
 
 		$baojianpin_id= $_POST["baojianpin_id"];
 		$baojianpin_name= $_POST["baojianpin_name"];
@@ -63,7 +63,7 @@ class BaojianpinData extends CI_Controller{
 			'baojianpin_tiaoma'=> $baojianpin_tiaoma, 'baojianpin_pinpai'=> $baojianpin_pinpai, 
 			'baojianpin_value'=> $baojianpin_value, 'baojianpin_buy'=> $baojianpin_buy,
 			'baojianpin_position'=> $baojianpin_position, 'baojianpin_enname'=> $baojianpin_enname);
-		$str=$this->data_model->insertData('baojianpin', $data);
+		$str=$this->Data_model->insertData('baojianpin', $data);
 		if($str==1){
 			redirect('admin/AdminHomePage/index/'.$user_name.'/Saved/'.$list_tab_id);
 		}else{

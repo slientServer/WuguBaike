@@ -1,7 +1,7 @@
 <?php
 //数据库处理model
 
-class Data_model extends CI_Model{
+class data_model extends CI_Model{
 	
 	public function __construct(){
 		//call the CI_Model constructor
